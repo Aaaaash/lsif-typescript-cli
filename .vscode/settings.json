@@ -1,0 +1,11 @@
+{
+    "editor.autoIndent": false,
+    "eslint.validate": [
+        "javascript",
+        "typescript"
+    ],
+    "javascript.format.insertSpaceAfterConstructor": true,
+    "javascript.preferences.quoteStyle": "single",
+    "prettier.tabWidth": 4,
+    "prettier.eslintIntegration": true
+}

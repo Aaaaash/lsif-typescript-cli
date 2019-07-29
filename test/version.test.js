@@ -4,7 +4,7 @@ const fse = require('fs-extra');
 
 const { cliPath } = require('./common');
 
-test('Should printed correct version', () => {
+test('Should printed correct version.', () => {
     const packagePath = path.join(__dirname, '..', 'package.json');
     const packageJson = JSON.parse(fse.readFileSync(packagePath).toString());
     const process = cp.fork(cliPath, ['--version']);
