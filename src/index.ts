@@ -1,4 +1,4 @@
-import * as commander from 'commander';
+import commander from 'commander';
 import * as fse from 'fs-extra';
 import * as path from 'path';
 

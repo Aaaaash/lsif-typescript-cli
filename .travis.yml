@@ -1,0 +1,19 @@
+
+language: node_js
+sudo: true
+
+os:
+  - linux
+
+node_js:
+  - "10.15.0"
+
+
+install:
+  - yarn install
+  - sudo apt-get install unzip
+
+script:
+  - yarn run lint
+  - yarn run build
+  - yarn run test

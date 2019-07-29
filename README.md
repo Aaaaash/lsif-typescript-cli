@@ -1,5 +1,7 @@
 ## LSIF TypeScript Cli
 
+[![Build Status](https://travis-ci.org/Aaaaash/lsif-typescript-cli.svg?branch=master)](https://travis-ci.org/Aaaaash/lsif-typescript-cli)
+
 Index project and upload LSIF file to LSIF TypeScript Server.
 
 ## Usage
