@@ -1,0 +1,23 @@
+{
+  "name": "lsif-typescript-cli",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:Aaaaash/lsif-typescript-cli.git",
+  "author": "Aaaaash <binshao54@gmail.com>",
+  "license": "MIT",
+  "bin": {
+    "lsif-ts-cli": "./lib/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "lsif-ts-cli --version"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^8.0.0",
+    "commander": "^2.20.0",
+    "fs-extra": "^8.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.5.3"
+  }
+}
