@@ -6,7 +6,7 @@
   "author": "Aaaaash <binshao54@gmail.com>",
   "license": "MIT",
   "bin": {
-    "lsif-ts-cli": "./lib/index.js"
+    "lsif-ts-cli": "./bin/lsif-ts-cli"
   },
   "scripts": {
     "build": "tsc -p .",

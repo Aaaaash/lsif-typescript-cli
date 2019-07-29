@@ -3,4 +3,4 @@ lib/
 dist/
 node_modules/
 out/
-
+jest.config.js
