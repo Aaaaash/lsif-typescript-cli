@@ -32,3 +32,8 @@ script:
   - yarn run build              # Build
   - yarn run index              # Index and upload
 ```
+
+### TODO
+
+- 索引 TypeScript 项目
+- 上传索引文件到指定服务器
