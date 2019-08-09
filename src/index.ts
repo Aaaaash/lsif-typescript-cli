@@ -18,12 +18,16 @@ commander.version(packageJson.version)
     .option('-c --config', 'Show cli configuration.')
     .parse(process.argv);
 
-const options = commander.opts();
+function run(): void {
+    const options = commander.opts();
 
-if (options.config) {
-    console.log(defaultConfig);
+    if (options.config) {
+        console.log(defaultConfig);
+    }
+
+    if (options.project) {
+        cliOptions.project = options.project;   
+    }
 }
 
-if (options.project) {
-    cliOptions.project = options.project;
-}
+run();

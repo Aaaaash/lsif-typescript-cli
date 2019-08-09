@@ -1,5 +1,11 @@
+import * as path from 'path';
+import * as fs from 'fs';
+
+const lsifTscPackage = path.join(__dirname, '..', 'node_modules', 'lsif-tsc', 'package.json');
+const packageJson = JSON.parse(fs.readFileSync(lsifTscPackage).toString());
+
 export const defaultConfig = {
-    version: '0.4.6',
+    version: packageJson.version,
     compilerOptions: {
         rootDir: 'src',
         target: 'es5',

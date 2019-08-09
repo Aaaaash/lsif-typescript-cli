@@ -1,8 +1,7 @@
 const cp = require('child_process');
-const { cliPath } = require('./common');
+const { cliPath, forkMode } = require('./common');
 
 test('Should printed cli default configuration.', () => {
-    const childProcess = cp.fork(cliPath, ['--version']);
     const defaultConfig = JSON.stringify({
         version: '0.4.6',
         compilerOptions: {
@@ -14,9 +13,16 @@ test('Should printed cli default configuration.', () => {
         projectRoot: process.cwd(),
         serverUrl: 'https://lsif-typescript.net',
     });
-    if (childProcess.stdout) {
-        childProcess.stdout.addListener('data', (chunk) => {
-            expect(JSON.stringify(chunk)).toEqual(defaultConfig);
+    forkMode(cliPath, ['--version'])
+        .then((stdio) => {
+            console.log(stdio, defaultConfig);
+            expect(JSON.stringify(stdio)).toEqual(defaultConfig);
         });
-    }
+});
+
+test('Should upload dump file and return success.', () => {
+    forkMode(cliPath, ['--upload'])
+        .then((stdio) => {
+
+        });
 });

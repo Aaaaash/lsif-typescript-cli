@@ -3,3 +3,4 @@ lib/
 *-error.log
 *.log
 package-lock.json
+coverage
